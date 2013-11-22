@@ -1,5 +1,0 @@
-@function create-grid($column-width: $default-column-width, $gutter-width: $default-gutter-width, $total-columns: $default-column-width) {
-  $new-grid: (column-width: $column-width, gutter-width: $gutter-width, total-columns: $total-columns);
-
-  @return $new-grid;
-}

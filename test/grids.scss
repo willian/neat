@@ -1,0 +1,13 @@
+@import 'bourbon/bourbon';
+@import 'app/assets/stylesheets/neat';
+
+$my-grid: -neat-new-grid(700px, 99, 12);
+// @debug -neat-grid-column-width($my-grid);
+
+$my-grid: -neat-grid-set-column-width($my-grid, 800px);
+// @debug -neat-grid-column-width($my-grid);
+
+.test {
+  color: -neat-grid-column-width($my-grid);
+}
+
