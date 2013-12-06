@@ -2,3 +2,66 @@ $border-box-sizing: false;
 
 @import 'bourbon/bourbon';
 @import 'app/assets/stylesheets/neat';
+
+.container {
+  @include -neat-row-container; // Merge row and outer-container into one mixin
+
+  .element {
+    @include -neat-fill-columns(6) { // Unliek span-columns, fill-parent can take a block
+      @include -neat-omega(auto); // Omega is stand-alone now, and can be turned off
+      background-color: #000;
+      color: #FFF;
+
+      .nested-element {
+        @include -neat-span-columns(3); // No more 'y of x' inside the span-columns block
+      }
+    }
+  }
+
+  .persian-element {
+    @include -neat-use-direction(RTL) { // Direction blocks
+      @include -neat-fill-columns(5, 3) { // No more shift() as shifting will happen inside fill-columns
+        @include -neat-omega(disable);
+      }
+    }
+  }
+
+  .table-element {
+    @include -neat-use-display(table) { // Display blocks
+      @include -neat-fill-parent;
+    }
+
+    .nested-table-element {
+      @include -neat-use-opposite-direction { // Float element to opposite direction
+        @include -neat-fill-columns(6);
+      }
+    }
+  }
+}
+
+$my-other-grid: -neat-new-grid(960px, 32px, 10); // Multiple grids
+
+.some-other-container {
+  @include -neat-use-grid($my-other-grid) { // Block mixin that changes the grid context
+    @include -neat-row-container;
+
+    @at-root { // Use @at-root to prevent deeply nested CSS as a result of Neat blocks
+      .root-element {
+        @include -neat-fill-parent(1/2); // Would fill half the columns of the parent
+        @include -neat-omega(2n);
+
+        @include -neat-media(below 480px, between 580px and 780px, above 1024px) { // Multiple MQs, simplified syntax
+          background-color: #555;
+        }
+      }
+    }
+
+    .element {
+      $my-split-breakpoints: -neat-new-media-split(500px, 700px); // Automated media-splitting
+
+      @include -neat-media(-neat-media-split-get($breakpoints, 1)) { // Get and use splits
+        color: #FFF;
+      }
+    }
+  }
+}
