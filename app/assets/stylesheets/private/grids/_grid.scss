@@ -1,23 +1,23 @@
 // Create grid
 @function -neat-new-grid($column-width, $gutter-width, $total-columns) {
-  $new-grid: (#{$k-column-width}: $column-width, #{$k-gutter-width}: $gutter-width, #{$k-total-columns}: $total-columns);
+  $new-grid: (#{$COLUMN-WIDTH}: $column-width, #{$GUTTER-WIDTH}: $gutter-width, #{$TOTAL-COLUMNS}: $total-columns);
 
   @return $new-grid;
 }
 
 // Getters
 @function -neat-grid-column-width($grid) {
-  $column-width: if(type-of($grid) == map, map-get($grid, #{$k-column-width}), null);
+  $column-width: if(type-of($grid) == map, map-get($grid, #{$COLUMN-WIDTH}), null);
   @return $column-width;
 }
 
 @function -neat-grid-gutter-width($grid) {
-  $gutter-width: if(type-of($grid) == map, map-get($grid, #{$k-gutter-width}), null);
+  $gutter-width: if(type-of($grid) == map, map-get($grid, #{$GUTTER-WIDTH}), null);
   @return $gutter-width;
 }
 
 @function -neat-grid-total-columns($grid) {
-  $total-columns: if(type-of($grid) == map, map-get($grid, #{$k-total-columns}), null);
+  $total-columns: if(type-of($grid) == map, map-get($grid, #{$TOTAL-COLUMNS}), null);
   @return $total-columns;
 }
 

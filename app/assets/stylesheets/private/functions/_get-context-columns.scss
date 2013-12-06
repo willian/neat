@@ -1,11 +1,11 @@
 @function -neat-get-parent-columns($list) {
-  $_columns: -neat-grid-total-columns($-neat-default-grid);
+  $columns: -neat-grid-total-columns($-neat-default-grid);
 
   @if length($list) == 3 {
-    $_columns: nth($list, 3);
+    $columns: nth($list, 3);
   } @else if length($list) == 2 {
-    $_columns: nth($list, 2);
+    $columns: nth($list, 2);
   }
 
-  @return $_columns;
+  @return $columns;
 }

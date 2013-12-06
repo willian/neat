@@ -1,6 +1,6 @@
 @mixin -neat-span-columns($column-span: $columns of $parent-columns) {
-  $_columns: nth($span, 1);
-  $_parent-columns: -neat-get-parent-columns($column-span);
+  $columns: nth($span, 1);
+  $parent-columns: -neat-get-parent-columns($column-span);
 
   // TODO: Update nesting context
   // TODO: Get current direction conetxt
