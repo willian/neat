@@ -7,13 +7,13 @@ $border-box-sizing: false;
   @include -neat-row-container; // Merge row and outer-container into one mixin
 
   .element {
-    @include -neat-fill-columns(6) { // Unliek span-columns, fill-parent can take a block
-      @include -neat-omega(auto); // Omega is stand-alone now, and can be turned off
+    @include -neat-fill-columns(6) { // Unlike span-columns, fill-parent can take a block
+      @include -neat-omega(auto); // Omega is entirely standalone now
       background-color: #000;
       color: #FFF;
 
       .nested-element {
-        @include -neat-span-columns(3); // No more 'y of x' inside the span-columns block
+        @include -neat-fill-columns(3); // No more 'y of x', the block take care of that
       }
     }
   }
@@ -21,7 +21,7 @@ $border-box-sizing: false;
   .persian-element {
     @include -neat-use-direction(RTL) { // Direction blocks
       @include -neat-fill-columns(5, 3) { // No more shift() as shifting will happen inside fill-columns
-        @include -neat-omega(disable);
+        @include -neat-omega(disable); // Omega can be disabled
       }
     }
   }
@@ -29,11 +29,11 @@ $border-box-sizing: false;
   .table-element {
     @include -neat-use-display(table) { // Display blocks
       @include -neat-fill-parent;
-    }
 
-    .nested-table-element {
-      @include -neat-use-opposite-direction { // Float element to opposite direction
-        @include -neat-fill-columns(6);
+      .nested-table-element {
+        @include -neat-use-opposite-direction { // Float element to opposite direction
+          @include -neat-fill-columns(6);
+        }
       }
     }
   }
