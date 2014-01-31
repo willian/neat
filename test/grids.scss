@@ -7,7 +7,7 @@ $border-box-sizing: false;
   @include -neat-row-container; // Merge row and outer-container into one mixin
 
   .element {
-    @include -neat-fill-columns(6) { // Unlike span-columns, fill-parent can take a block
+      @include -neat-fill-columns(6) { // Unlike span-columns, fill-parent can take a block
       @include -neat-omega(auto); // Omega is entirely standalone now
       background-color: #000;
       color: #FFF;
