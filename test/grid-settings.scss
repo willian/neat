@@ -1,0 +1,8 @@
+@import 'bourbon/bourbon';
+$grid-columns: 6;
+@import '../app/assets/stylesheets/neat';
+$disable-warnings: true !global;
+
+.grid-columns-setting {
+  @include span-columns(6);
+}
