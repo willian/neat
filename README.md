@@ -31,7 +31,7 @@ Neat uses the [RubyGems](https://rubygems.org) package manager to easily generat
   gem install neat
   ```
 
-2. Install or update Neat’s dependencies:
+2. Install or update Neat's dependencies:
 
   ```bash
   gem install sass # or gem update sass
@@ -56,7 +56,7 @@ Neat uses the [RubyGems](https://rubygems.org) package manager to easily generat
   @import "neat/neat";
   ```
 
-  It’s not recommended to add or modify the Neat files so that you can update them easily.
+  It's not recommended to add or modify the Neat files so that you can update them easily.
 
 ## Installation for Ruby on Rails
 
@@ -155,7 +155,7 @@ div.element {
 }
 ```
 
-If the element’s parent isn’t the top-most container, you need to add the number of columns of the parent element to keep the right proportions:
+If the element's parent isn't the top-most container, you need to add the number of columns of the parent element to keep the right proportions:
 
 ```scss
 div.container {
@@ -230,11 +230,11 @@ $large-viewport: new-breakpoint(min-width em($second-breakpoint-value + 1));
 }
 ```
 
-If, for some reason, you still think that `omega-reset` is the only way you want to go, check out Josh Fry’s [omega-reset](http://joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat).
+If, for some reason, you still think that `omega-reset` is the only way you want to go, check out Josh Fry's [omega-reset](http://joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat).
 
 #### Why are the elements not properly aligned with the visual grid?
 
-The visual grid is built using CSS gradients whose stops might contain decimal values depending on the default settings of your grid. In order to render the gradient, browsers round the pixel values since they can’t deal with pixel fractions.
+The visual grid is built using CSS gradients whose stops might contain decimal values depending on the default settings of your grid. In order to render the gradient, browsers round the pixel values since they can't deal with pixel fractions.
 
 As a result the viusal grid might be few pixels off in some browsers. The result is also inconsistent across browsers. For best results, preview your website on Firefox as it renders closest to the expected outcome.
 
@@ -251,7 +251,7 @@ Unless you [open a pull request](https://github.com/thoughtbot/neat/compare/), t
 
 ## Links
 
-- Ask questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/neat). Don’t forget to tag them `bourbon` and `neat`.
+- Ask questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/neat). Don't forget to tag them `bourbon` and `neat`.
 - Suggest features or file bugs in [Issues](https://github.com/thoughtbot/neat/issues).
 - Join `#bourbon-neat` on `irc.freenode.net`.
 
@@ -275,8 +275,8 @@ Unless you [open a pull request](https://github.com/thoughtbot/neat/compare/), t
 
 ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
 
-Neat is maintained and funded by [thoughtbot, inc](http://thoughtbot.com). Tweet your questions or suggestions to [@bourbonsass](https://twitter.com/bourbonsass) and while you’re at it follow us too.
+Neat is maintained and funded by [thoughtbot, inc](http://thoughtbot.com). Tweet your questions or suggestions to [@bourbonsass](https://twitter.com/bourbonsass) and while you're at it follow us too.
 
 ## License
 
-Copyright © 2012–2014 [thoughtbot, inc](http://thoughtbot.com). Neat is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
+Copyright &copy; 2012-2014 [thoughtbot, inc](http://thoughtbot.com). Neat is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
