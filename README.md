@@ -96,7 +96,7 @@ Neat uses the [RubyGems](https://rubygems.org) package manager to easily generat
 2. Reinstall the Neat gem, using the `-v` flag to specify the version you need:
 
   ```bash
-  gem install neat -v 1.7.0
+  gem install neat -v 1.7.1
   ```
 
 3. Follow the [instructions above](#installation) to install Neat into your project.
